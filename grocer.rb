@@ -62,7 +62,7 @@ end
 
 
 
-
+=begin
 def apply_coupons(cart, coupons)
   all_items = []
   cart.collect {|items, info| all_items << items}
@@ -76,7 +76,7 @@ def apply_coupons(cart, coupons)
   end
   cart
 end
-
+=end
 
 
 
