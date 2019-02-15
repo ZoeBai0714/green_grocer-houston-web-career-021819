@@ -44,7 +44,7 @@ def apply_coupons(cart, coupons)
     if cart["#{hashes[:item]}"] && cart["#{hashes[:item]}"][:count] >= hashes[:num]
       if cart["#{hashes[:item]} W/COUPON"]
 
-       cart["#{hashes[:item]} W/COUPON"][:count] += 1      #why we don't create the empty hash here is because 
+       cart["#{hashes[:item]} W/COUPON"][:count] += 1      #why we don't create the empty hash here is because we want to increment the count. in order to do that, we need to have a count number already. (meaning count attribute exist)
 
      else
        cart["#{hashes[:item]} W/COUPON"]={}  
