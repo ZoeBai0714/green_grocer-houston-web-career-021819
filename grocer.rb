@@ -44,7 +44,7 @@ def apply_coupons(cart, coupons)
     if cart["#{hashes[:item]}"] && cart["#{hashes[:item]}"][:count] >= hashes[:num]
       if cart["#{hashes[:item]} W/COUPON"]
 
-       cart["#{hashes[:item]} W/COUPON"][:count] += 1 
+       cart["#{hashes[:item]} W/COUPON"][:count] += 1      #why we don't create the empty hash here is because 
 
      else
        cart["#{hashes[:item]} W/COUPON"]={}  
@@ -58,26 +58,6 @@ def apply_coupons(cart, coupons)
  end
   cart
 end
-
-
-
-
-=begin
-def apply_coupons(cart, coupons)
-  all_items = []
-  cart.collect {|items, info| all_items << items}
-  
-  coupons.collect do |hashes|
-    if all_items.include?(hashes[:item]) && cart["#{hashes[:item]}"][:count] >= hashes[:num]
-      cart["#{hashes[:item]} W/COUPON"]={}
-      cart["#{hashes[:item]} W/COUPON"][:clearance] = cart["#{hashes[:item]}"][:clearance]
-      
-    end
-  end
-  cart
-end
-=end
-
 
 
 
